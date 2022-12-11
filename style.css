@@ -56,14 +56,14 @@ nav {
 
 @media screen and (max-width:768px) {
     body {
-        overflow: hidden;
+        overflow: hidden; /* can't scroll*/
     }
    .nav-links {
     position: absolute;
     right: 0px;
     height: 92vh;
     top: 8vh;
-    background-color:  #5d4954;
+    background-color: #5d4954;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,4 +77,18 @@ nav {
    .burger {
     display: block;
    }
+   .nav-acive {
+    transform: translateX(0%);
+   }
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px) ;
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px) ;
+    }
 }
